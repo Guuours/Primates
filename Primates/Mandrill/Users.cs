@@ -3,6 +3,7 @@ using Primates.Mandrill.Model;
 using System;
 using System.IO;
 using System.Net;
+using System.Text;
 
 namespace Primates.Mandrill
 {
@@ -14,6 +15,7 @@ namespace Primates.Mandrill
 
             using (WebClient client = new WebClient())
             {
+                client.Encoding = Encoding.UTF8;
                 client.Headers.Add("Content-Type", "application/json");
 
                 try
